@@ -1,0 +1,32 @@
+### GET /api/airlines | Recuperar todas las Aerolíneas
+GET http://localhost:3000/api/airlines
+
+### GET /api/airlines/:name | Recuperar una Aerolínea concreta por su nombre
+GET http://localhost:3000/api/airlines/Iberia
+
+### POST /api/airlines | Crear una nueva Aerolínea
+POST http://localhost:3000/api/airlines
+Content-Type: application/json
+
+{
+    "name": "Volaris",
+    "country": "México",
+    "net_worth": 10000000.00,
+    "closed": false,
+    "foundation_date": "2000-01-01"
+}
+
+### PUT /api/airlines/:name | Actualizar una Aerolínea
+PUT http://localhost:3000/api/airlines/11
+Content-Type: application/json
+
+{
+    "name": "Volaris",
+    "country": "Colombia",
+    "net_worth": 10000000.00,
+    "closed": true,
+    "foundation_date": "2000-01-01"
+}
+
+### DELETE /api/airlines/:id | Eliminar una Aerolínea
+DELETE http://localhost:3000/api/airlines/11
