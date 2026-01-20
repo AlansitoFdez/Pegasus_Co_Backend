@@ -11,10 +11,10 @@ class AirlinesServices {
         return result;
     }
 
-    async getAirlineByName(name) {
-        const result = await Airline.findOne({
+    async getAirlineByCountry(country) {
+        const result = await Airline.findAll({
             where: {
-                name: name
+                country: country
             }
         });
         return result;
@@ -31,12 +31,12 @@ class AirlinesServices {
     }
 
   async updateAirline(id_airline, airline) {
-    //Actualizar un director
+    //Actualizar una aerolínea
     let numFilas = await Airline.update(airline, {
       where: { id: id_airline },
     });
     // Si el numero de filas afectadas por la actualización es cero
-    // y existe el registro para ese director, es que no hay cambios en los datos
+    // y existe el registro para esa aerolínea, es que no hay cambios en los datos
     // la actualización
     if(numFilas == 0 && await Airline.findByPk(id_airline)){
       numFilas = 1; // Devuelvo uno para indicar que todo ha ido bien

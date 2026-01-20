@@ -1,8 +1,8 @@
 ### GET /api/airlines | Recuperar todas las Aerolíneas
 GET http://localhost:3000/api/airlines
 
-### GET /api/airlines/:name | Recuperar una Aerolínea concreta por su nombre
-GET http://localhost:3000/api/airlines/Iberia
+### GET /api/airlines/:country | Recuperar una Aerolínea concreta por su país
+GET http://localhost:3000/api/airlines/Spain
 
 ### POST /api/airlines | Crear una nueva Aerolínea
 POST http://localhost:3000/api/airlines

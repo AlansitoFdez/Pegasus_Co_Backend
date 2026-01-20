@@ -21,29 +21,29 @@ class AirlinesController {
         }
     }
 
-    async getAirlineByName(req, res) {
-        const AirlineName = req.params.name;
+    async getAirlineByCountry(req, res) {
+        const AirlineCountry = req.params.country;
         try {
-            const Airline = await airlinesServices.getAirlineByName(AirlineName)
+            const Airline = await airlinesServices.getAirlineByCountry(AirlineCountry)
             if(Airline) {
                 return res.status(200).json({
                     ok: true,
                     datos: Airline,
-                    mensaje: "Aerolínea obtenida correctamente"
+                    mensaje: "Aerolíneas obtenidas correctamente"
                 })
             } else {
                 return res.status(404).json({
                     ok: false, 
                     datos: null, 
-                    mensaje: "Aerolínea no encontrada"
+                    mensaje: "Aerolíneas no encontradas"
                 })
             }
         } catch (err) {
-            logMensaje("Error en getAirlineByName: ", err)
+            logMensaje("Error en getAirlineByCountry: ", err)
             return res.status(500).json({
                 ok: false,
                 datos: null,
-                mensaje: "Error al recuperar datos de la aerolínea"
+                mensaje: "Error al recuperar datos de las aerolíneas"
             })
         }
     }

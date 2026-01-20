@@ -1,0 +1,41 @@
+### GET /api/flights | Recuperar todos los vuelos
+GET http://localhost:3000/api/flights
+
+### GET /api/flights/origin/:origin | Recuperar vuelos por origen
+GET http://localhost:3000/api/flights/origin/Barcelona
+
+### GET /api/flights/destination/:destination | Recuperar vuelos por destino
+GET http://localhost:3000/api/flights/destination/Lisbon
+
+### POST /api/flights/:id | Crear un vuelo
+POST http://localhost:3000/api/flights
+Content-Type: application/json
+
+{
+    "flight_number": "1234",
+    "origin": "Barcelona",
+    "destination": "Lisbon",
+    "departure_date": "2026-01-20 12:00:00",
+    "arrival_date": "2026-01-20 15:00:00",
+    "price": 247.00,
+    "cancelled": false,
+    "airline_id": 1
+}
+
+### PUT /api/flights/:id | Actualizar un vuelo
+PUT http://localhost:3000/api/flights/11
+Content-Type: application/json
+
+{
+    "flight_number": "BARLIS1234",
+    "origin": "Barcelona",
+    "destination": "Lisbon",
+    "departure_date": "2026-01-20 12:00:00",
+    "arrival_date": "2026-01-20 15:00:00",
+    "price": 200.00,
+    "cancelled": false,
+    "airline_id": 1
+}
+
+### DELETE /api/flights/:id | Eliminar un vuelo
+DELETE http://localhost:3000/api/flights/11
