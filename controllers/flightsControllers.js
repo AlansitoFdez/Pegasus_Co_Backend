@@ -48,33 +48,6 @@ class FlightsController {
         }
     }
 
-    async getFlightByDestination(req, res) {
-        try {
-            const FlightDestination = req.params.destination;
-            const Flight = await flightsServices.getFlightByDestination(FlightDestination);
-            if(Flight) {
-                return res.status(200).json({
-                    ok: true,
-                    datos: Flight,
-                    mensaje: "Vuelo obtenido correctamente"
-                });
-            } else {
-                return res.status(404).json({
-                    ok: false, 
-                    datos: null, 
-                    mensaje: "Vuelo no encontrado"
-                });
-            }
-        } catch (err) {
-            logMensaje("Error en getFlightByDestination: ", err);
-            return res.status(500).json({
-                ok: false,
-                datos: null,
-                mensaje: "Error al recuperar datos del vuelo"
-            });
-        }
-    }
-
     async createFlight(req, res) {
         const flight = req.body;
         try {

@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ### PUT /api/airlines/:name | Actualizar una Aerolínea
-PUT http://localhost:3000/api/airlines/11
+PUT http://localhost:3000/api/airlines/14
 Content-Type: application/json
 
 {
@@ -29,4 +29,4 @@ Content-Type: application/json
 }
 
 ### DELETE /api/airlines/:id | Eliminar una Aerolínea
-DELETE http://localhost:3000/api/airlines/11
+DELETE http://localhost:3000/api/airlines/14

@@ -4,9 +4,6 @@ GET http://localhost:3000/api/flights
 ### GET /api/flights/origin/:origin | Recuperar vuelos por origen
 GET http://localhost:3000/api/flights/origin/Barcelona
 
-### GET /api/flights/destination/:destination | Recuperar vuelos por destino
-GET http://localhost:3000/api/flights/destination/Lisbon
-
 ### POST /api/flights/:id | Crear un vuelo
 POST http://localhost:3000/api/flights
 Content-Type: application/json
@@ -23,7 +20,7 @@ Content-Type: application/json
 }
 
 ### PUT /api/flights/:id | Actualizar un vuelo
-PUT http://localhost:3000/api/flights/11
+PUT http://localhost:3000/api/flights/13
 Content-Type: application/json
 
 {
@@ -38,4 +35,4 @@ Content-Type: application/json
 }
 
 ### DELETE /api/flights/:id | Eliminar un vuelo
-DELETE http://localhost:3000/api/flights/11
+DELETE http://localhost:3000/api/flights/13

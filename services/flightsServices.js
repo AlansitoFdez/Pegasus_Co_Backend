@@ -20,15 +20,6 @@ class FlightsServices {
         return result;
     }
 
-    async getFlightByDestination(destination) {
-        const result = await Flight.findAll({
-            where: {
-                destination: destination
-            }
-        });
-        return result;
-    }
-
     async createFlight(flight) {
         const result = await Flight.create(flight);
         return result;

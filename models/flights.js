@@ -31,10 +31,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATE,
       allowNull: false
     },
-    arrival_date: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
     airline_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -57,7 +53,7 @@ module.exports = function(sequelize, DataTypes) {
         ]
       },
       {
-        name: "flights_airline_id_FK",
+        name: "FK_flights_airline",
         using: "BTREE",
         fields: [
           { name: "airline_id" },

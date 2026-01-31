@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require("path")
 const { logMensaje } = require('./utils/logger.js')
+const cors = require('cors') 
 
 // RUTAS
 const airlinesRoutes = require('./routes/airlinesRoutes.js')
@@ -13,6 +14,12 @@ const port = process.env.PORT || 3000
 
 // MIDDLEWARES
 app.use(express.json())
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true
+}));
 
 // RUTAS
 app.use('/api/airlines', airlinesRoutes)
