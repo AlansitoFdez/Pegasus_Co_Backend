@@ -2,6 +2,14 @@
 
 Esta es la API robusta de **Pegasus & Co.**, diseñada para gestionar la persistencia y lógica de negocio del sistema aeronáutico. Construida con **Node.js** y **Express**, utiliza el ORM **Sequelize** para una comunicación eficiente con la base de datos MySQL.
 
+## 👥 Autor
+* **Nombre:** Alan Fernández Diosdado
+* **Proyecto:** Práctica Final - Desarrollo Web Full Stack
+* **Enlace Backend:** https://github.com/AlansitoFdez/Pegasus_Co_Backend.git
+* **Enlace Frontend:** https://github.com/AlansitoFdez/Pegasus_Co_Frontend.git
+
+---
+
 ## 🚀 Tecnologías Utilizadas
 
 * **Node.js**: Entorno de ejecución para JavaScript en el servidor.
