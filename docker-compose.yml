@@ -19,6 +19,7 @@ services:
     environment:
       PMA_HOST: ${PMA_HOST}
       PMA_USER: ${PMA_USER}
+      DB_HOST: ${DB_HOST}
       PMA_PASSWORD: ${PMA_PASSWORD}
       UPLOAD_LIMIT: ${PHP_UPLOAD_MAX_FILESIZE}
     ports:
