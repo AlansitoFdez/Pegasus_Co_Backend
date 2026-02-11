@@ -15,10 +15,19 @@ const port = process.env.PORT || 3000
 // MIDDLEWARES
 app.use(express.json())
 
+// ============================================
+// MIDDLEWARE - CORS - Cualquier origen
+// ============================================
 app.use(cors({
-  origin: 'http://frontend-alan.s3-website-us-east-1.amazonaws.com/',
-  methods: 'GET,POST,PUT,DELETE',
-  credentials: true
+  origin: (origin, callback) => {
+    const allowedOrigins = process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : ['http://localhost:5173/'];
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true // Permite cookies y headers de autorización
 }));
 
 // RUTAS
