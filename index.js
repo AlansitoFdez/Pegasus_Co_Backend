@@ -16,7 +16,7 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'http://frontend-alan.s3-website-us-east-1.amazonaws.com/',
   methods: 'GET,POST,PUT,DELETE',
   credentials: true
 }));
