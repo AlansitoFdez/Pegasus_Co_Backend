@@ -37,5 +37,10 @@ services:
       - db
     environment:
       - NODE_ENV=production
+      - DB_HOST=db
+      - DB_USER=${MYSQL_USER}
+      - DB_PASSWORD=${MYSQL_PASSWORD}
+      - DB_NAME=${MYSQL_DATABASE}
+      - DB_PORT=${MYSQL_PORT}
 volumes:
   persistent:
